@@ -15,6 +15,7 @@ RUN apt-get update && apt-get install -y \
     npm \
     rustup \
     gcc \
+    libffi-dev \
     && apt-get clean
 
 RUN pip install uv --break-system-packages
