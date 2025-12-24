@@ -16,5 +16,5 @@ RUN apt-get update && apt-get install -y \
     npm \
     && apt-get clean
 
-RUN pipx install uv && pipx ensurepath
+RUN pipx install uv && pipx ensurepath && source ~/.bashrc
 RUN npm install -g aws-cdk
