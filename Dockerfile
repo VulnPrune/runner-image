@@ -15,5 +15,5 @@ RUN apt-get update && apt-get install -y \
     npm \
     && apt-get clean
 
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh && cp ~/.local/bin/* /bin
+RUN pip install uv --break-system-packages
 RUN npm install -g aws-cdk
