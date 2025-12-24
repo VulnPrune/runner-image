@@ -7,7 +7,6 @@ RUN apt-get update && apt-get install -y \
     wget \
     python3 \
     python3-pip \
-    pipx \
     git \
     golang \
     jq \
@@ -16,5 +15,5 @@ RUN apt-get update && apt-get install -y \
     npm \
     && apt-get clean
 
-RUN pipx install uv && pipx ensurepath && source ~/.bashrc
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh && cp ~/.local/bin/* /bin
 RUN npm install -g aws-cdk
